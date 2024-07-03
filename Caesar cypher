@@ -1,0 +1,15 @@
+#ZQH SKIJEC QTT QHC
+
+def decrypt(text, key):
+    result = ''
+    for i in range(len(text)):
+        char = text[i]
+        result += chr((ord(char) + key-65) % 26 + 65)
+
+
+    return result 
+
+for i in range(26):
+    print(i)
+    a = decrypt('ZQHSKIJECQTTQHC', i)
+    print(a)
